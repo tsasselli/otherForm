@@ -1,14 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { OtherInsuranceFormModule, otherInsuranceFormComponents } from './insurance-form/other-insurance-form.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    otherInsuranceFormComponents
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    OtherInsuranceFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
