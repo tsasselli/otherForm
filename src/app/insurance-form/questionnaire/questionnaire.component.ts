@@ -32,11 +32,9 @@ export class QuestionnaireComponent implements OnInit {
    };
 
    onSubmit() {
-    // Make sure to create a deep copy of the form-model
     const result: OtherInsurace = Object.assign({}, this.insuranceForm.value);
     result.carrier = Object.assign({}, result.carrier);
 
-    // Do useful stuff with the gathered data
     console.log(result);
   }
 
