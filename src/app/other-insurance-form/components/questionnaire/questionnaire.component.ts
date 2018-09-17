@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { OtherInsurace } from '../../Interface/other-insurance';
+import { OtherInsurace } from '../../Models/other-insurance';
 
 @Component({
   selector: 'app-questionnaire',

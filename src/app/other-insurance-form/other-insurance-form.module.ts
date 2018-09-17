@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { ClaimFormComponent } from './components/claim-form/claim-form.component';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FlexLayoutModule
   ],
   declarations: [
-], 
+ClaimFormComponent], 
 exports: [ReactiveFormsModule, FlexLayoutModule]
 })
 export class OtherInsuranceFormModule { 
