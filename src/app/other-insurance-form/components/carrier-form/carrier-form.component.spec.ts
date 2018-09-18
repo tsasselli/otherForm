@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClaimFormComponent } from './claim-form.component';
+import { CarrierFormComponent } from './carrier-form.component';
 
-describe('ClaimFormComponent', () => {
-  let component: ClaimFormComponent;
-  let fixture: ComponentFixture<ClaimFormComponent>;
+describe('CarrierFormComponent', () => {
+  let component: CarrierFormComponent;
+  let fixture: ComponentFixture<CarrierFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClaimFormComponent ]
+      declarations: [ CarrierFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClaimFormComponent);
+    fixture = TestBed.createComponent(CarrierFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

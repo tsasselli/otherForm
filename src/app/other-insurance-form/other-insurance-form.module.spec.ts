@@ -1,10 +1,10 @@
-import { InsuranceFormModule } from './other-insurance-form.module';
+import { OtherInsuranceFormModule } from './other-insurance-form.module';
 
 describe('InsuranceFormModule', () => {
-  let insuranceFormModule: InsuranceFormModule;
+  let insuranceFormModule: OtherInsuranceFormModule;
 
   beforeEach(() => {
-    insuranceFormModule = new InsuranceFormModule();
+    insuranceFormModule = new OtherInsuranceFormModule();
   });
 
   it('should create an instance', () => {

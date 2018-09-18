@@ -1,0 +1,72 @@
+$hc-form-padding: 5;
+
+.hc-form {
+    @include flex-auto();
+    @include flex-horizontal();
+    margin: rem(-$hc-form-padding);
+    flex-wrap: wrap;
+}
+
+.hc-form-field {
+    @include flex-none();
+    @include flex-vertical();
+    padding: rem($hc-form-padding);
+    box-sizing: border-box;
+
+    span:first-child {
+        padding-bottom: rem(5);
+    }
+
+    &.error {
+        color: $error-red;
+
+        input {
+            @extend input.error;
+        }
+
+        span:last-child {
+            padding-top: rem(5);
+        }
+    }
+
+    &.submit {
+        margin-top: rem(10);
+    }
+}
+
+.hc-form-row {
+    @include flex-none();
+    @include flex-horizontal();
+    width: 100%;
+    box-sizing: border-box;
+
+    & > .hc-form-field {
+        @include flex-auto();
+        flex-basis: 0;
+    }
+}
+
+@for $i from 1 through $hc-grid-columns {
+    .hc-form-field.d-#{$i} {
+        width: percentage($i / $hc-grid-columns);
+    }
+}
+
+@include small-breakpoint() {
+    @for $i from 1 through $hc-grid-columns {
+        .hc-form-field.xs-#{$i} {
+            width: percentage($i / $hc-grid-columns);
+        }
+    }
+}
+
+@include small-breakpoint(true) {
+    .hc-form-row {
+        @include flex-vertical();
+
+        & > .hc-form-field {
+            @include flex-none();
+            width: 100%;
+        }
+    }
+}

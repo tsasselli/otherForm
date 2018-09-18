@@ -1,0 +1,43 @@
+@mixin breakpoint($width, $max: false) {
+    $property: null;
+
+    @if ($max) {
+        $property: "max";
+    } @else {
+        $property: "min";
+    }
+
+    @media screen and (#{$property}-width: #{$width}px) {
+        @content;
+    }
+}
+
+@mixin xsmall-breakpoint($max: false) {
+    @include breakpoint(320, $max) {
+        @content;
+    }
+}
+
+@mixin small-breakpoint($max: false) {
+    @include breakpoint(480, $max) {
+        @content;
+    }
+}
+
+@mixin medium-breakpoint($max: false) {
+    @include breakpoint(768, $max) {
+        @content;
+    }
+}
+
+@mixin large-breakpoint($max: false) {
+    @include breakpoint(1024, $max) {
+        @content;
+    }
+}
+
+@mixin xlarge-breakpoint($max: false) {
+    @include breakpoint(1441, $max) {
+        @content;
+    }
+}

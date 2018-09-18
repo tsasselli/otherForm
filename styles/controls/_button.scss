@@ -1,0 +1,105 @@
+$button-padding: rem(10);
+$button-border-size: rem(1);
+$button-border-radius: rem(2);
+
+$button-foreground-color: $white;
+$button-background-color: $accent-primary;
+$button-border-color: $accent-primary;
+
+$button-foreground-color-hover: $white;
+$button-background-color-hover: shade($accent-primary, 20%);
+$button-border-color-hover: shade($accent-primary, 20%);
+
+$button-foreground-color-focus: $white;
+$button-background-color-focus: shade($accent-primary, 20%);
+$button-border-color-focus: shade($accent-primary, 20%);
+
+$button-foreground-color-active: $white;
+$button-background-color-active: shade($accent-primary, 40%);
+$button-border-color-active: shade($accent-primary, 40%);
+
+$button-foreground-color-disabled: tint($light-gray, 40%);
+$button-background-color-disabled: tint($light-gray, 60%);
+$button-border-color-disabled: tint($light-gray, 60%);
+
+button {
+    padding: $button-padding;
+    color: $button-foreground-color;
+    background-color: $button-background-color;
+    border: solid $button-border-size $button-border-color;
+    border-radius: $button-border-radius;
+    transition: all 0.25s;
+
+    &:hover {
+        color: $button-foreground-color-hover;
+        background: $button-background-color-hover;
+        border-color: $button-border-color-hover;
+        cursor: pointer;
+    }
+
+    &:focus {
+        color: $button-foreground-color-focus;
+        background: $button-background-color-focus;
+        border-color: $button-border-color-focus;
+        outline: none;
+    }
+
+    &:active {
+        color: $button-foreground-color-active;
+        background-color: $button-background-color-active;
+        border-color: $button-border-color-active;
+    }
+
+    &:disabled {
+        color: $button-foreground-color-disabled;
+        background-color: $button-background-color-disabled;
+        border-color: $button-border-color-disabled;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &::-moz-focus-border {
+        border: 0;
+    }
+}
+
+button.simple {
+    @extend button;
+
+    color: $button-background-color;
+    background-color: transparent;
+
+    &:hover {
+        color: $button-background-color-hover;
+    }
+
+    &:focus {
+        color: $button-background-color-focus;
+    }
+
+    &:active {
+        color: $button-background-color-active;
+    }
+
+    &:disabled {
+        color: $button-background-color-disabled;
+    }
+}
+
+button.unset {
+    @extend button;
+
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    border-color: transparent;
+    transition: none;
+
+    &:hover,&:focus,&:active,&:disabled {
+        color: inherit;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}

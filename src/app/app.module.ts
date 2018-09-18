@@ -1,4 +1,3 @@
-import { ClaimFormComponent } from './other-insurance-form/components/claim-form/claim-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';

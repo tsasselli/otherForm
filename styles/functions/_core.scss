@@ -1,0 +1,11 @@
+@function rem($size, $base: $font-size) {
+    @return ($size / $base) + rem;
+}
+
+@function tint($color, $percentage) {
+  @return mix(rgb(255, 255, 255), $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(rgb(0, 0, 0), $color, $percentage);
+}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { ClaimFormComponent } from './components/claim-form/claim-form.component';
+import { CarrierFormComponent } from './components/carrier-form/carrier-form.component';
 
 
 @NgModule({
@@ -13,11 +13,10 @@ import { ClaimFormComponent } from './components/claim-form/claim-form.component
     FormsModule,
     FlexLayoutModule
   ],
-  declarations: [
-ClaimFormComponent], 
+ 
 exports: [ReactiveFormsModule, FlexLayoutModule]
 })
 export class OtherInsuranceFormModule { 
 }
-export const otherInsuranceFormComponents = [QuestionnaireComponent]
+export const otherInsuranceFormComponents = [QuestionnaireComponent, CarrierFormComponent]
 

@@ -3,37 +3,47 @@
 </div>
 <div class="hc-of-column">
     <form [formGroup]="insuranceForm" class="hc-of-form">
-           <div class="hc-of-form-group">
+        <div class="hc-of-form-group">
+            <div class="hc-of-form-col hc-of-form-col-emp-name">
                 <label for="" class="hc-of-form-label"> Employee Name
-                    <input class="hc-of-form-input hc-of-form-input-emp-name" type="text">
-
+                    <input class="hc-of-form-input" type="text">
                 </label>
-           
+            </div>
+
+            <div class="hc-of-form-col hc-of-form-col-member-id">
                 <label for="" class="hc-of-form-label"> Member Id Number
                     <input class="hc-of-form-input" type="text">
                 </label>
+            </div>
 
-                    <label for="" class="hc-of-form-label">Claim Number(optional)
-                        <input class="hc-of-form-input" type="text">
-                    </label>
-                </div>
+            <div class="hc-of-form-col hc-of-form-col-claim-num">
+                <label for="" class="hc-of-form-label">Claim Number(optional)
+                    <input class="hc-of-form-input" type="text">
+                </label>
+            </div>
+        </div>
 
-                <div class="hc-of-form-group"> 
-                    <label for="" class="hc-of-form-label"> Incurred(optional)
-                        <input class="hc-of-form-input" type="text">
-                    </label>
+        <div class="hc-of-form-group">
+            <div class="hc-of-form-col hc-of-form-col-incurred">
+                <label for="" class="hc-of-form-label"> Incurred(optional)
+                    <input class="hc-of-form-input" type="text">
+                </label>
+            </div>
 
-                    <label for="" class="hc-of-form-label"> Account No.(optional)
-                        <input class="hc-of-form-input" type="text">
-                    </label>
-           
-                    <label for="" class="hc-of-form-label"> Group(Employer)
-                        <input class="hc-of-form-input" type="text">
-                    </label>
-                </div>
-            <button disabled="disabled">Add Carrier</button>
-        <ng-template>
+            <div class="hc-of-form-col hc-of-form-col-claim-acct-num"></div>
+            <label for="" class="hc-of-form-label"> Account No.(optional)
+                <input class="hc-of-form-input" type="text">
+            </label>
+        </div>
 
-        </ng-template>
-    </form>
+        <div class="hc-of-form-col hc-of-form-col-group">
+            <label for="" class="hc-of-form-label"> Group(Employer)
+                <input class="hc-of-form-input" type="text">
+            </label>
+       </div>
+<button disabled="disabled">Add Carrier</button>
+<ng-template>
+    <app-carrier-form></app-carrier-form>
+</ng-template>
+</form>
 </div>

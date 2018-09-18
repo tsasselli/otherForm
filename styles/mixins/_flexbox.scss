@@ -1,0 +1,106 @@
+@mixin flex-none() {
+    display: flex;
+    flex: none;
+}
+
+@mixin flex-auto() {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+@mixin flex-grow() {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+@mixin flex-shrink() {
+    display: flex;
+    flex: 0 1 auto;
+}
+
+@mixin flex-vertical() {
+    flex-direction: column;
+}
+
+@mixin flex-horizontal() {
+    flex-direction: row;
+}
+
+@mixin flex-wrap() {
+    flex-wrap: wrap;
+}
+
+@mixin flex-top-left() {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@mixin flex-top-center($horizontal: true) {
+    @if $horizontal {
+        align-items: flex-start;
+        justify-content: center;
+    } @else {
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+@mixin flex-top-right($horizontal: true) {
+    @if $horizontal {
+        align-items: flex-start;
+        justify-content: flex-end;
+    } @else {
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+}
+
+@mixin flex-center-left($horizontal: true) {
+    @if $horizontal {
+        align-items: center;
+        justify-content: flex-start;
+    } @else {
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+@mixin flex-center() {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-right($horizontal: true) {
+    @if $horizontal {
+        align-items: center;
+        justify-content: flex-end;
+    } @else {
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+@mixin flex-bottom-left($horizontal: true) {
+    @if $horizontal {
+        align-items: flex-end;
+        justify-content: flex-start;
+    } @else {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+}
+
+@mixin flex-bottom-center($horizontal: true) {
+    @if $horizontal {
+        align-items: flex-end;
+        justify-content: center;
+    } @else {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@mixin flex-bottom-right() {
+    align-items: flex-end;
+    justify-content: flex-end;
+}

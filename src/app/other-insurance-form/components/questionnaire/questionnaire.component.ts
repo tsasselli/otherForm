@@ -41,7 +41,6 @@ export class QuestionnaireComponent implements OnInit {
   revert() {
     // Resets to blank object
     this.insuranceForm.reset();
-
     // Resets to provided model
     this.insuranceForm.reset({ OtherInsurace: new OtherInsurace(), requestType: '', text: '' });
   }
